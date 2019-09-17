@@ -12,3 +12,7 @@ body {
 .nav {
   background-color: rgba(27, 9, 3, 0.986);
 }
+
+.dropdown {
+  padding-top: 25px;
+}
