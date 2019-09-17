@@ -12,3 +12,12 @@ body {
 .nav {
   background-color: rgba(27, 9, 3, 0.986);
 }
+
+
+.title {
+  font-family: 'New Rocker';
+  font-size: 70px;
+  letter-spacing: 5px;
+  text-align: center;
+  color: rgb(224, 223, 223);
+}
