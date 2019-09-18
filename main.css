@@ -1,41 +1,100 @@
-body {
+html, body {
   margin: 0;
   padding: 0;
   background-image: url(images/street-girl.jpg);
+  background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
 }
 
 .nav {
   background-color: rgba(27, 9, 3, 0.986);
 }
 
-
-
-.title {
-  font-family: 'New Rocker';
-  font-size: 70px;
-  letter-spacing: 5px;
-  margin-top: 100px;
-  text-align: center;
-  color: rgba(27, 9, 3, 0.986)
-} 
-
-#banner {
-  width: 600px;
-  height: 300px;
-  margin: 0 auto;
-  justify-content: center;
+.merchTitle {
+  padding-top: 20px;
 }
 
-#carouselSlideOnly {
-  width: 400px;
-  height: 200px;
-  margin: 0 auto;
-}  
+.dropdown {
+  padding-top: 25px;
+}
+
+.product-card {
+  border-style: solid;
+  border-color: black;
+  border-width: 3px;
+  width: 400px; 
+  background-color:rgb(214, 206, 206);
+  color: black;
+}
+
+#product-card {
+  margin: 1px 1px 1px 1px;
+  padding-left: 140px;
+  padding-top: 50px;
+  padding-bottom: 10px;
+}
+
+.individualProductCard {
+  padding: 10px 10px 10px 10px;
+  height: 600px;
   
+}
+
+.productCardTitle {
+  border-style: solid;
+  border-color: black;
+  background-color: gray;
+  height: 150px;
+}
+
+.productImage {
+  width: 300px;
+  height: 200px;
+}
+
+.productCardBody {
+  height: 200px;
+}
+
+footer {
+  border-style: solid;
+  padding-top: 1px;
+  padding-top: 1px;
+  background-color: gray;
+}
+
+.title {
+  margin: 0px;
+  font-family: "New Rocker";
+  font-size: 70px;
+  letter-spacing: 5px;
+  text-align: center;
+  color: rgba(27, 9, 3, 0.986);
+}
+
+.about {
+  width: 700px;
+  margin:  auto;
+  padding: 2px;
+  text-align: center;
+  color: whitesmoke;
+  background-color: rgba(27, 9, 3, 0.986);
+}
+
+.banner {
+  text-align: center;
+}
+
+.slide {
+  display: inline-block;
+  margin-top: 10px;
+  
+}
+
 
 #disc-cards-div {
   display: flex;
@@ -49,5 +108,4 @@ h1 {
   
 .dropdown {
   padding-top: 25px;
-
 }
