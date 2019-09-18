@@ -50,10 +50,10 @@ const printToDOM = (textToPrint, divID) => {
 
   //Function that filters info from Upcoming Concerts Array and prints into collapsable list
 const eventDetails = (eventsArray) => {
-    let domstring = ''
+    let eventDomstring = ''
     for (i=0; i < eventsArray.length; i++) {
         let event = eventsArray[i]
-        domstring += `
+        eventDomstring += `
         <div class="accordion" id="accordionExample">
             <div class="card text-center">
                 <div class="card-header" id="headingOne">
@@ -76,7 +76,7 @@ const eventDetails = (eventsArray) => {
         </div>
         `
     }
-    printToDOM(domstring, 'concert-zone')
+    printToDOM(eventDomstring, 'concert-zone')
 }
 
 eventDetails(tourDates);
@@ -88,11 +88,6 @@ const images = [{
   image4: "https://upload.wikimedia.org/wikipedia/commons/b/bb/-Agnostic_Front_live_in_Rome-2.jpg",
   image5: "https://www.maxpixel.net/static/photo/1x/Grunge-Design-Dirty-Underground-Music-Punk-Grungy-2891524.jpg",
 }];
-
-
-const printToDOM = (divID, textToPrint) => {
-  document.getElementById(divID).innerHTML = textToPrint;
-}
 
 const albums =  [
   {
