@@ -5,7 +5,6 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
-  width: 100%;
   height: 100vh;
 }
 
@@ -18,6 +17,22 @@ body {
   font-family: 'New Rocker';
   font-size: 70px;
   letter-spacing: 5px;
+  margin-top: 100px;
   text-align: center;
-  color: rgb(224, 223, 223);
+  color: rgba(27, 9, 3, 0.986)
+} 
+
+#banner {
+  width: 600px;
+  height: 300px;
+  margin: 0 auto;
+  justify-content: center;
+}
+
+#carouselControls {
+  width: 400px;
+  height: 200px;
+  margin: 0 auto;
+  
+  
 }
