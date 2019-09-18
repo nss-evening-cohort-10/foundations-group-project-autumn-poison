@@ -1,12 +1,11 @@
-html, body {
+body, html {
   margin: 0;
   padding: 0;
-  background-image: url(images/street-girl.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
-  width: 100%;
   height: 100%;
+  background: url(images/street-girl.jpg); 
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .nav {
@@ -25,8 +24,8 @@ html, body {
   border-style: solid;
   border-color: black;
   border-width: 3px;
-  width: 400px; 
-  background-color:rgb(214, 206, 206);
+  width: 400px;
+  background-color: rgb(214, 206, 206);
   color: black;
 }
 
@@ -40,7 +39,6 @@ html, body {
 .individualProductCard {
   padding: 10px 10px 10px 10px;
   height: 600px;
-  
 }
 
 .productCardTitle {
@@ -77,7 +75,7 @@ footer {
 
 .about {
   width: 700px;
-  margin:  auto;
+  margin: auto;
   padding: 2px;
   text-align: center;
   color: whitesmoke;
@@ -91,9 +89,7 @@ footer {
 .slide {
   display: inline-block;
   margin-top: 10px;
-  
 }
-
 
 #disc-cards-div {
   display: flex;
