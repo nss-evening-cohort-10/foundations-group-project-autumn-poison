@@ -204,7 +204,7 @@ const products = [
     },
     ];
 
-
+// function to print the different merch products to the merch page.
   const productBuilder = (productsArray) => {
       let productDomString = '';
        for (let i = 0; i < productsArray.length; i++) {
@@ -225,8 +225,7 @@ const products = [
       
         printToDOM(productDomString, 'product-card');
   };
-
-  // productBuilder(products);
+ // productBuilder(products);
 
   
   const discCardPrinter = (albumArr) => {
@@ -282,7 +281,7 @@ const products = [
 };
 
 // eventDetails(tourDates);
-
+// init function will allow us to run each function on it's specific page.
 const init = () => {
   if (document.URL.includes('disc')) {
     discCardPrinter(albums);
@@ -298,3 +297,27 @@ const init = () => {
 };
 
 init();
+
+const sortClick = (event) => {
+  const type = event.target.id
+  selectedProducts = [];
+  for (let i = 0; i < products.length; i++) {
+    const product = products[i];
+     if (product.type === type) {
+       selectedProducts.push(product);
+     };
+  };
+
+  if (type === 'all') {
+    productBuilder(products);
+    } else {
+    productBuilder(selectedProducts)
+    };
+};
+
+document.getElementById('all').addEventListener('click', sortClick);
+document.getElementById('cassettes').addEventListener('click', sortClick);
+document.getElementById('poster').addEventListener('click', sortClick);
+document.getElementById('sticker').addEventListener('click', sortClick);
+
+
