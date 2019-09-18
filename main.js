@@ -50,16 +50,17 @@ const eventDetails = (eventsArray) => {
             <div class="card text-center">
                 <div class="card-header" id="headingOne">
                     <h2 class="mb-0">
-                    <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
                     ${event.city}, ${event.date}
                     </button>
                     </h2>
                 </div>
 
-                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
                      <div class="card-body">
                         <h3>${event.venue}</h3>
                         <h3>${event.time}</h3>
+                        <a>Button Placeholder</a>
                     </div>
                 </div>
             </div>
