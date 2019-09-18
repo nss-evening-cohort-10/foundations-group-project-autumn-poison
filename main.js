@@ -1,3 +1,47 @@
+const images = [
+  "images/daft-punk.jpg",
+
+  "images/garage-rock.jpg",
+
+  "https://upload.wikimedia.org/wikipedia/commons/5/52/Greyskull_-_Texas_Punk_Rock_Band.jpg",
+
+  "https://upload.wikimedia.org/wikipedia/commons/b/bb/-Agnostic_Front_live_in_Rome-2.jpg",
+
+  "https://live.staticflickr.com/3873/14926974367_9dae308c14_b.jpg",
+
+  "https://live.staticflickr.com/486/18921275049_6ba5b9ee50_b.jpg",
+
+  "https://live.staticflickr.com/7311/27559637810_8a2122303d_b.jpg",
+
+  "https://live.staticflickr.com/916/26749861637_753648f035_b.jpg"
+];
+
+let currentImage = 0;
+
+function initSlideshow() {
+  setImage(0);
+  setInterval(function() {
+    nextImage();
+  }, 3000);
+}
+
+function nextImage() {
+  if (images.length === currentImage + 1) {
+    currentImage = 0;
+  } else {
+    currentImage++;
+  }
+  setImage(currentImage);
+}
+
+function setImage(image) {
+  document.querySelectorAll(".slide")[0].src = images[image];
+}
+
+//window.onload = initSlideshow();
+
+
+
 
 const printToDOM = (textToPrint, divID) => {
   document.getElementById(divID).innerHTML = textToPrint;
@@ -50,13 +94,7 @@ const tourDates = [
     }
 ];
 
-const images = [{
-  image1: " C:\Users\John\workspace\projects\foundations-group-project-autumn-poison\images\daft-punk.jpg",
-  image2: "C:\Users\John\workspace\projects\foundations-group-project-autumn-poison\images\garage-rock.jpg",
-  image3: "https://upload.wikimedia.org/wikipedia/commons/5/52/Greyskull_-_Texas_Punk_Rock_Band.jpg",
-  image4: "https://upload.wikimedia.org/wikipedia/commons/b/bb/-Agnostic_Front_live_in_Rome-2.jpg",
-  image5: "https://www.maxpixel.net/static/photo/1x/Grunge-Design-Dirty-Underground-Music-Punk-Grungy-2891524.jpg",
-}];
+
 
 const products = [
   { name: '"Songs of Anger, Songs of Hope" Cassette Tape',
@@ -166,7 +204,7 @@ const products = [
     },
     ];
 
-
+// function to print the different merch products to the merch page.
   const productBuilder = (productsArray) => {
       let productDomString = '';
        for (let i = 0; i < productsArray.length; i++) {
@@ -187,8 +225,7 @@ const products = [
       
         printToDOM(productDomString, 'product-card');
   };
-
-  // productBuilder(products);
+ // productBuilder(products);
 
   
   const discCardPrinter = (albumArr) => {
@@ -197,7 +234,9 @@ const products = [
         const album = albumArr[i]
         albumDomString += `
             <div class="card text-center" style="width: 22rem;">
-                <img style="width: 100%; height: auto;" src=${album.imageUrl} class="card-img-top" alt="...">
+                <img style="width: 100%; height: auto;" src=${
+                  album.imageUrl
+                } class="card-img-top" alt="...">
                 <div class="card-body">
                    <h5 class="card-title">${album.title}</h5>
                    <p class="card-text">${album.songlist.join("<br />")}</p>
@@ -242,7 +281,7 @@ const products = [
 };
 
 // eventDetails(tourDates);
-
+// init function will allow us to run each function on it's specific page.
 const init = () => {
   if (document.URL.includes('disc')) {
     discCardPrinter(albums);
@@ -250,7 +289,35 @@ const init = () => {
     productBuilder(products);
   } else if (document.URL.includes('events')) {
     eventDetails(tourDates);
+  } else if (document.URL.includes('index')) {
+     initSlideshow(images)
+     nextImage(images)
+     setImage(image)
 };
 };
 
 init();
+
+const sortClick = (event) => {
+  const type = event.target.id
+  selectedProducts = [];
+  for (let i = 0; i < products.length; i++) {
+    const product = products[i];
+     if (product.type === type) {
+       selectedProducts.push(product);
+     };
+  };
+
+  if (type === 'all') {
+    productBuilder(products);
+    } else {
+    productBuilder(selectedProducts)
+    };
+};
+
+document.getElementById('all').addEventListener('click', sortClick);
+document.getElementById('cassettes').addEventListener('click', sortClick);
+document.getElementById('poster').addEventListener('click', sortClick);
+document.getElementById('sticker').addEventListener('click', sortClick);
+
+
