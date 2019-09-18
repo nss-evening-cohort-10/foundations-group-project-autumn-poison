@@ -1,3 +1,4 @@
+//Array of Upcoming Concert Details
 const tourDates = [
     {
         city:'Nashville',
@@ -41,6 +42,7 @@ const printToDOM = (textToPrint, divID) => {
     document.getElementById(divID).innerHTML = textToPrint;
   }  
 
+  //Function that filters info from Upcoming Concerts Array and prints into collapsable list
 const eventDetails = (eventsArray) => {
     let domstring = ''
     for (i=0; i < eventsArray.length; i++) {
@@ -50,13 +52,13 @@ const eventDetails = (eventsArray) => {
             <div class="card text-center">
                 <div class="card-header" id="headingOne">
                     <h2 class="mb-0">
-                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseOne${i}" aria-expanded="false" aria-controls="collapseOne">
                     ${event.city}, ${event.date}
                     </button>
                     </h2>
                 </div>
 
-                <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                <div id="collapseOne${i}" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
                      <div class="card-body">
                         <h3>${event.venue}</h3>
                         <h3>${event.time}</h3>
