@@ -13,6 +13,59 @@ html, body {
   background-color: rgba(27, 9, 3, 0.986);
 }
 
+.merchTitle {
+  padding-top: 20px;
+}
+
+.dropdown {
+  padding-top: 25px;
+}
+
+.product-card {
+  border-style: solid;
+  border-color: black;
+  border-width: 3px;
+  width: 400px; 
+  background-color:rgb(214, 206, 206);
+  color: black;
+}
+
+#product-card {
+  margin: 1px 1px 1px 1px;
+  padding-left: 140px;
+  padding-top: 50px;
+  padding-bottom: 10px;
+}
+
+.individualProductCard {
+  padding: 10px 10px 10px 10px;
+  height: 600px;
+  
+}
+
+.productCardTitle {
+  border-style: solid;
+  border-color: black;
+  background-color: gray;
+  height: 150px;
+}
+
+.productImage {
+  width: 300px;
+  height: 200px;
+}
+
+.productCardBody {
+  height: 200px;
+}
+
+footer {
+  border-style: solid;
+  padding-top: 1px;
+  padding-top: 1px;
+  background-color: gray;
+}
+
 .title {
   margin: 0px;
   font-family: "New Rocker";
@@ -50,8 +103,4 @@ html, body {
 h1 {
   margin-top: 1em;
   margin-bottom: 1em;
-}
-
-.dropdown {
-  padding-top: 25px;
 }
