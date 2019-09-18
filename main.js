@@ -3,30 +3,35 @@ const tourDates = [
     {
         city:'Nashville',
         venue: 'Exit/In',
+        price: '$15',
         date: '04/20',
         time: '10pm'
     },
     {
         city:'Chicago',
         venue: 'Bar Bar Black Sheep',
+        price: '$10',
         date: '04/22',
         time: '10pm'
     },
     {
         city:'Duluth',
         venue: 'Cheese World',
+        price: '$20',
         date: '04/25',
         time: '8pm'
     },
     {
         city:'Boise',
         venue: 'The Golden Potato',
+        price: '$5',
         date: '06/09',
         time: '10pm'
     },
     {
         city:'Portland',
         venue: 'Tanis',
+        price: '$25',
         date: '07/07',
         time: '10pm'
     },
@@ -34,6 +39,7 @@ const tourDates = [
         city:'Austin',
         venue: 'The Chain Drive',
         date: '06/09',
+        price: '$10',
         time: '10pm'
     }
 ];
@@ -62,6 +68,7 @@ const eventDetails = (eventsArray) => {
                      <div class="card-body">
                         <h3>${event.venue}</h3>
                         <h3>${event.time}</h3>
+                        <h3>${event.price}</h3>
                         <a>Button Placeholder</a>
                     </div>
                 </div>
