@@ -95,6 +95,69 @@ const tourDates = [
 ];
 
 
+const printToDOM = (textToPrint, divID) => {
+    document.getElementById(divID).innerHTML = textToPrint;
+  }  
+
+  //Function that filters info from Upcoming Concerts Array and prints into collapsable list
+const eventDetails = (eventsArray) => {
+    let eventDomstring = ''
+    for (i=0; i < eventsArray.length; i++) {
+        let event = eventsArray[i]
+        eventDomstring += `
+        <div class="accordion" id="accordionExample">
+            <div class="card text-center">
+                <div class="card-header" id="headingOne">
+                    <h2 class="mb-0">
+                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseOne${i}" aria-expanded="false" aria-controls="collapseOne">
+                    ${event.city}, ${event.date}
+                    </button>
+                    </h2>
+                </div>
+
+                <div id="collapseOne${i}" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                     <div class="card-body">
+                        <h3>${event.venue}</h3>
+                        <h3>${event.time}</h3>
+                        <h3>${event.price}</h3>
+                        <a>Button Placeholder</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        `
+    }
+    printToDOM(eventDomstring, 'concert-zone')
+}
+
+eventDetails(tourDates);
+
+const images = [{
+  image1: " C:\Users\John\workspace\projects\foundations-group-project-autumn-poison\images\daft-punk.jpg",
+  image2: "C:\Users\John\workspace\projects\foundations-group-project-autumn-poison\images\garage-rock.jpg",
+  image3: "https://upload.wikimedia.org/wikipedia/commons/5/52/Greyskull_-_Texas_Punk_Rock_Band.jpg",
+  image4: "https://upload.wikimedia.org/wikipedia/commons/b/bb/-Agnostic_Front_live_in_Rome-2.jpg",
+  image5: "https://www.maxpixel.net/static/photo/1x/Grunge-Design-Dirty-Underground-Music-Punk-Grungy-2891524.jpg",
+}];
+
+const albums =  [
+  {
+  imageUrl: 'https://i.pinimg.com/originals/c8/39/3c/c8393cc3bbf105906ef2a93f22947863.jpg',
+  title: 'Songs of Anger, Songs of Hope ',
+  songlist: [
+     'Now That Is What I Call Edgy',
+     'Hiroshima',
+     'War Crimes (Afghanistan, El Salvador)',
+     'Uranium',
+     'Smokescreen',
+     'Animals Are Not Ours...',
+     'Contributory Negligence',
+     'Dirty Business',
+     'Porton Down',
+     'Sense Your Own Strength'
+     ]
+
+
 
 const products = [
   { name: '"Songs of Anger, Songs of Hope" Cassette Tape',
@@ -137,6 +200,7 @@ const products = [
     type: 'sticker',
     imageUrl: 'https://res.cloudinary.com/teepublic/image/private/s--HNTufKxp--/t_Resized%20Artwork/c_fit,g_north_west,h_954,w_954/co_191919,e_outline:48/co_191919,e_outline:inner_fill:48/co_ffffff,e_outline:48/co_ffffff,e_outline:inner_fill:48/co_bbbbbb,e_outline:3:1000/c_mpad,g_center,h_1260,w_1260/b_rgb:eeeeee/c_limit,f_jpg,h_630,q_90,w_630/v1514826476/production/designs/2243845_1.jpg',
     description: 'Are you really Punk Rock? Get a sticker.'
+
   },
 
   { name: 'Distressed Anarchy Sticker',
