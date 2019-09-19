@@ -172,10 +172,10 @@ const products = [
     description: 'Buy your 1st full cassette tape "Kitchen Sink Politics" with hits like: "Joke Army", "Half the Sky" and more!',
   },
  
-  { name: '"Bullshit Detector Volume 4" Cassette Tape',
+  { name: '"Bulls**t Detector Volume 4" Cassette Tape',
     type: 'cassettes',
    imageUrl: 'https://e.snmc.io/i/300/w/2c244d12783e26b840769e223446672a/3460362',
-   description: 'Heres a compilation album we are on called "Bullshit Detector Volume 4" with our track: "Utopia - A New World"',
+   description: 'Heres a compilation album we are on called "Bulls**t Detector Volume 4" with our track: "Utopia - A New World"',
   },
  
   { name: 'Concert Poster from our First Ever Show',
@@ -280,7 +280,7 @@ const products = [
             <img class="productImage" src=${product.imageUrl} alt='image of ${product.name}'/>
              <h5 class"productCardBody">${product.description}</h4>
               <footer>
-               <button type="button" class="btn btn-primary">Buy</button>
+               <button type="button" id="buy" class="btn btn-primary">Buy</button>
               </footer>
           </div>
          </div>
@@ -378,6 +378,14 @@ const sortClick = (event) => {
     productBuilder(selectedProducts)
     };
 };
+
+document.getElementById('product-card').addEventListener('click', function(event) {
+  if (event.target.id === 'buy' ) {
+      console.log(event.target.id);
+      window.location.href='./purchase.html';
+  }
+}
+);
 
 document.getElementById('all').addEventListener('click', sortClick);
 document.getElementById('cassettes').addEventListener('click', sortClick);
