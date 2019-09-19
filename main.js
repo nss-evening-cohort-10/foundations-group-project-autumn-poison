@@ -216,7 +216,7 @@ const products = [
             <img class="productImage" src=${product.imageUrl} alt='image of ${product.name}'/>
              <h5 class"productCardBody">${product.description}</h4>
               <footer>
-               <button type="button" class="btn btn-primary">Buy</button>
+               <button type="button" id="buy" class="btn btn-primary">Buy</button>
               </footer>
           </div>
          </div>
@@ -314,6 +314,14 @@ const sortClick = (event) => {
     productBuilder(selectedProducts)
     };
 };
+
+document.getElementById('product-card').addEventListener('click', function(event) {
+  if (event.target.id === 'buy' ) {
+      console.log(event.target.id);
+      window.location.href='./purchase.html';
+  }
+}
+);
 
 document.getElementById('all').addEventListener('click', sortClick);
 document.getElementById('cassettes').addEventListener('click', sortClick);
