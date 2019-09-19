@@ -94,11 +94,6 @@ const tourDates = [
     }
 ];
 
-
-const printToDOM = (textToPrint, divID) => {
-    document.getElementById(divID).innerHTML = textToPrint;
-  }  
-
   //Function that filters info from Upcoming Concerts Array and prints into collapsable list
 const eventDetails = (eventsArray) => {
     let eventDomstring = ''
