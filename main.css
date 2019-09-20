@@ -8,6 +8,7 @@ body, html {
   background-size: cover;
 }
 
+
 .nav {
   background-color: rgba(27, 9, 3, 0.986);
 }
@@ -73,6 +74,15 @@ footer {
   color: rgba(27, 9, 3, 0.986);
 }
 
+#photo {
+  display: block;
+  width: 600px;
+  height: 400px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 10px;
+}
+
 .about {
   width: 700px;
   margin: auto;
@@ -80,15 +90,6 @@ footer {
   text-align: center;
   color: whitesmoke;
   background-color: rgba(27, 9, 3, 0.986);
-}
-
-.banner {
-  text-align: center;
-}
-
-.slide {
-  display: inline-block;
-  margin-top: 10px;
 }
 
 #disc-cards-div {
