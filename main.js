@@ -1,3 +1,4 @@
+
 const printToDOM = (textToPrint, divID) => {
   document.getElementById(divID).innerHTML = textToPrint;
 }; 
@@ -19,6 +20,7 @@ const images = [
 
   "https://live.staticflickr.com/916/26749861637_753648f035_b.jpg"
 ];
+
 
 let currentImage = 0;
 
@@ -145,6 +147,22 @@ const tourDates = [
     },
   ];
 
+const images = [{
+   imageUrl: "https://upload.wikimedia.org/wikipedia/commons/5/52/Greyskull_-_Texas_Punk_Rock_Band.jpg"
+}];
+
+const imageBuilder = (imageArray) => {
+  let imageDomString = "";
+  for (let i = 0; i < imageArray.length; i++) {
+   let image = imageArray[i];
+    imageDomString += `<img src='${image.imageUrl}'>`
+  }
+    printToDOM(imageDomString, 'photo');     
+}; 
+
+
+    
+    //imageBuilder(images);
 
 const products = [
   { name: '"Songs of Anger, Songs of Hope" Cassette Tape',
@@ -290,11 +308,10 @@ const init = () => {
     productBuilder(products);
   } else if (document.URL.includes('events')) {
     eventDetails(tourDates);
-  } else if (document.URL.includes('index')) {
-     initSlideshow(images)
-     nextImage(images)
-     setImage(image)
-};
+  } 
+  if (document.URL.includes('index')) {
+    imageBuilder(images);
+  }
 };
 
 init();
@@ -314,7 +331,11 @@ const sortClick = (event) => {
     } else {
     productBuilder(selectedProducts)
     };
+
+}; 
+
 };
+
 
 
 
