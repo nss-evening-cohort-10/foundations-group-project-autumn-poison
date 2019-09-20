@@ -1,50 +1,7 @@
-
 const printToDOM = (textToPrint, divID) => {
   document.getElementById(divID).innerHTML = textToPrint;
 }; 
 
-// const images = [
-//   "images/daft-punk.jpg",
-
-//   "images/garage-rock.jpg",
-
-//   "https://upload.wikimedia.org/wikipedia/commons/5/52/Greyskull_-_Texas_Punk_Rock_Band.jpg",
-
-//   "https://upload.wikimedia.org/wikipedia/commons/b/bb/-Agnostic_Front_live_in_Rome-2.jpg",
-
-//   "https://live.staticflickr.com/3873/14926974367_9dae308c14_b.jpg",
-
-//   "https://live.staticflickr.com/486/18921275049_6ba5b9ee50_b.jpg",
-
-//   "https://live.staticflickr.com/7311/27559637810_8a2122303d_b.jpg",
-
-//   "https://live.staticflickr.com/916/26749861637_753648f035_b.jpg"
-// ];
-
-
-// let currentImage = 0;
-
-// function initSlideshow() {
-//   setImage(0);
-//   setInterval(function() {
-//     nextImage();
-//   }, 3000);
-// }
-
-// function nextImage() {
-//   if (images.length === currentImage + 1) {
-//     currentImage = 0;
-//   } else {
-//     currentImage++;
-//   }
-//   setImage(currentImage);
-// }
-
-// function setImage(image) {
-//   document.querySelectorAll(".slide")[0].src = images[image];
-// }
-
-// window.onload = initSlideshow();
 
 
 //Array of Upcoming Concert Details
@@ -334,6 +291,7 @@ const sortClick = (event) => {
     };
 
 }; 
+
 
 
 
