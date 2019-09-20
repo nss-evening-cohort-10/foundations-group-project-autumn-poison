@@ -270,7 +270,7 @@ songlist: [
                       <h3>${event.venue}</h3>
                       <h3>${event.time}</h3>
                       <h3>${event.price}</h3>
-                        <button type="button" id="buy" class="btn btn-primary">Buy</button>
+                      <button type="button" id="buy" class="btn btn-primary">Buy</button>
                   </div>
               </div>
           </div>
