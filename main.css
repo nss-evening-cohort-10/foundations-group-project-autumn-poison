@@ -75,13 +75,13 @@ footer {
 }
 
 #photo {
-  display: block;
-  width: 600px;
-  height: 400px;
-  margin-right: auto;
   margin-left: auto;
+  margin-right: auto;
+  width: 1024px;
   margin-bottom: 10px;
 }
+
+
 
 .about {
   width: 700px;

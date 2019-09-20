@@ -84,7 +84,7 @@ const imageBuilder = (imageArray) => {
   let imageDomString = "";
   for (let i = 0; i < imageArray.length; i++) {
    let image = imageArray[i];
-    imageDomString += `<img src='${images.imageUrl}'>`
+    imageDomString += `<img src='${image.imageUrl}'>`
   }
     printToDOM(imageDomString, 'photo');     
 }; 
