@@ -303,6 +303,15 @@ const buyButton = () => {
   );
 };
 
+const checkOutButton = () => {
+  document.getElementById('purchase-card').addEventListener('click', function(event) {
+    if (event.target.id === 'checkOut' ) {
+      alert("Thank you for your purchase! Up the Punks!");
+      }
+    }
+  );
+};
+
 const megaListener = () => {
   document.getElementById('all').addEventListener('click', sortClick);
   document.getElementById('cassettes').addEventListener('click', sortClick);
