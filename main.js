@@ -1,30 +1,3 @@
-let currentImage = 0;
-
-function initSlideshow() {
-  setImage(0);
-  setInterval(function() {
-    nextImage();
-  }, 3000);
-}
-
-function nextImage() {
-  if (images.length === currentImage + 1) {
-    currentImage = 0;
-  } else {
-    currentImage++;
-  }
-  setImage(currentImage);
-}
-
-function setImage(image) {
-  document.querySelectorAll(".slide")[0].src = images[image];
-}
-
-//window.onload = initSlideshow();
-
-
-
-
 const printToDOM = (textToPrint, divID) => {
   document.getElementById(divID).innerHTML = textToPrint;
 }; 
@@ -312,7 +285,7 @@ const sortClick = (event) => {
 
 }; 
 
-};
+
 
 document.getElementById('product-card').addEventListener('click', function(event) {
   if (event.target.id === 'buy' ) {
