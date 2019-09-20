@@ -146,7 +146,7 @@ const tourDates = [
       ]
     },
   ];
-
+// Function to print image to home page
 const images = [{
    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/5/52/Greyskull_-_Texas_Punk_Rock_Band.jpg"
 }];
