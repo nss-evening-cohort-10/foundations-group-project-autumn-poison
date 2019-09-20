@@ -3,46 +3,46 @@ const printToDOM = (textToPrint, divID) => {
   document.getElementById(divID).innerHTML = textToPrint;
 }; 
 
-const images = [
-  "images/daft-punk.jpg",
+// const images = [
+//   "images/daft-punk.jpg",
 
-  "images/garage-rock.jpg",
+//   "images/garage-rock.jpg",
 
-  "https://upload.wikimedia.org/wikipedia/commons/5/52/Greyskull_-_Texas_Punk_Rock_Band.jpg",
+//   "https://upload.wikimedia.org/wikipedia/commons/5/52/Greyskull_-_Texas_Punk_Rock_Band.jpg",
 
-  "https://upload.wikimedia.org/wikipedia/commons/b/bb/-Agnostic_Front_live_in_Rome-2.jpg",
+//   "https://upload.wikimedia.org/wikipedia/commons/b/bb/-Agnostic_Front_live_in_Rome-2.jpg",
 
-  "https://live.staticflickr.com/3873/14926974367_9dae308c14_b.jpg",
+//   "https://live.staticflickr.com/3873/14926974367_9dae308c14_b.jpg",
 
-  "https://live.staticflickr.com/486/18921275049_6ba5b9ee50_b.jpg",
+//   "https://live.staticflickr.com/486/18921275049_6ba5b9ee50_b.jpg",
 
-  "https://live.staticflickr.com/7311/27559637810_8a2122303d_b.jpg",
+//   "https://live.staticflickr.com/7311/27559637810_8a2122303d_b.jpg",
 
-  "https://live.staticflickr.com/916/26749861637_753648f035_b.jpg"
-];
+//   "https://live.staticflickr.com/916/26749861637_753648f035_b.jpg"
+// ];
 
 
-let currentImage = 0;
+// let currentImage = 0;
 
-function initSlideshow() {
-  setImage(0);
-  setInterval(function() {
-    nextImage();
-  }, 3000);
-}
+// function initSlideshow() {
+//   setImage(0);
+//   setInterval(function() {
+//     nextImage();
+//   }, 3000);
+// }
 
-function nextImage() {
-  if (images.length === currentImage + 1) {
-    currentImage = 0;
-  } else {
-    currentImage++;
-  }
-  setImage(currentImage);
-}
+// function nextImage() {
+//   if (images.length === currentImage + 1) {
+//     currentImage = 0;
+//   } else {
+//     currentImage++;
+//   }
+//   setImage(currentImage);
+// }
 
-function setImage(image) {
-  document.querySelectorAll(".slide")[0].src = images[image];
-}
+// function setImage(image) {
+//   document.querySelectorAll(".slide")[0].src = images[image];
+// }
 
 // window.onload = initSlideshow();
 
@@ -299,18 +299,19 @@ const products = [
 
 // eventDetails(tourDates);
 
- 
+window.onload = function() {
+  imageBuilder(images);
+};
+
 // init function will allow us to run each function on it's specific page.
 const init = () => {
+  
   if (document.URL.includes('disc')) {
     discCardPrinter(albums);
   } else if (document.URL.includes('merch')) {
     productBuilder(products);
   } else if (document.URL.includes('events')) {
     eventDetails(tourDates);
-  } 
-  if (document.URL.includes('index')) {
-    imageBuilder(images);
   }
 };
 
@@ -333,8 +334,6 @@ const sortClick = (event) => {
     };
 
 }; 
-
-};
 
 
 
