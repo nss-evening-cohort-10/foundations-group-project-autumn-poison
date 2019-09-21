@@ -348,9 +348,6 @@ const sortClick = (event) => {
 
 }; 
 
-
-
-
 document.getElementById('all').addEventListener('click', sortClick);
 document.getElementById('cassettes').addEventListener('click', sortClick);
 document.getElementById('poster').addEventListener('click', sortClick);
