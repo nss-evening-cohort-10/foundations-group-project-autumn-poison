@@ -2,6 +2,48 @@ const printToDOM = (textToPrint, divID) => {
   document.getElementById(divID).innerHTML = textToPrint;
 }; 
 
+// const images = [
+//   "images/daft-punk.jpg",
+
+//   "images/garage-rock.jpg",
+
+//   "https://upload.wikimedia.org/wikipedia/commons/5/52/Greyskull_-_Texas_Punk_Rock_Band.jpg",
+
+//   "https://upload.wikimedia.org/wikipedia/commons/b/bb/-Agnostic_Front_live_in_Rome-2.jpg",
+
+//   "https://live.staticflickr.com/3873/14926974367_9dae308c14_b.jpg",
+
+//   "https://live.staticflickr.com/486/18921275049_6ba5b9ee50_b.jpg",
+
+//   "https://live.staticflickr.com/7311/27559637810_8a2122303d_b.jpg",
+
+//   "https://live.staticflickr.com/916/26749861637_753648f035_b.jpg"
+// ];
+
+
+// let currentImage = 0;
+
+// function initSlideshow() {
+//   setImage(0);
+//   setInterval(function() {
+//     nextImage();
+//   }, 3000);
+// }
+
+// function nextImage() {
+//   if (images.length === currentImage + 1) {
+//     currentImage = 0;
+//   } else {
+//     currentImage++;
+//   }
+//   setImage(currentImage);
+// }
+
+// function setImage(image) {
+//   document.querySelectorAll(".slide")[0].src = images[image];
+// }
+
+// window.onload = initSlideshow();
 
 
 //Array of Upcoming Concert Details
@@ -240,7 +282,7 @@ const products = [
               </div>
 
               <div id="collapseOne${i}" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
-                   <div class="card-body">
+                  <div class="card-body">
                       <h3>${event.venue}</h3>
                       <h3>${event.time}</h3>
                       <h3>${event.price}</h3>
@@ -292,13 +334,36 @@ const sortClick = (event) => {
 
 }; 
 
+let thankYouMessage = 'Thank you for your purchase!'
 
+const checkOut = () => {
+  let purchaseDomString = `
+  <div class="alert alert-success alert-dismissible fade show" role="alert">
+      <strong>${thankYouMessage}</strong>
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+      </button>
+  </div>`;
+  console.log(purchaseDomString);
+  printToDOM(purchaseDomString, 'checkout-zone');
+};
 
+// document.getElementById('all').addEventListener('click', sortClick);
+// document.getElementById('cassettes').addEventListener('click', sortClick);
+// document.getElementById('poster').addEventListener('click', sortClick);
+// document.getElementById('sticker').addEventListener('click', sortClick);
+// document.getElementById('complete-purchase').addEventListener('click', checkOut);
 
+const clickers = () => {
+  
+  if (document.URL.includes('merch')) {
+    document.getElementById('all').addEventListener('click', sortClick);
+    document.getElementById('cassettes').addEventListener('click', sortClick);
+    document.getElementById('poster').addEventListener('click', sortClick);
+    document.getElementById('sticker').addEventListener('click', sortClick);
+  } else if (document.URL.includes('purchase')) {
+    document.getElementById('complete-purchase').addEventListener('click', checkOut);
+  }
+};
 
-document.getElementById('all').addEventListener('click', sortClick);
-document.getElementById('cassettes').addEventListener('click', sortClick);
-document.getElementById('poster').addEventListener('click', sortClick);
-document.getElementById('sticker').addEventListener('click', sortClick);
-
-
+clickers();
