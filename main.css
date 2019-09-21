@@ -31,20 +31,19 @@ body, html {
 } */
 
 #product-card {
-  margin: 1px 1px 1px 1px;
-  padding-left: 140px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 5px 5px 5px 5px;
+  padding-left: 20px;
   padding-top: 50px;
   padding-bottom: 10px;
 
 }
 
 .card-img-top {
- width: 250px;
+ width: 285px;
  height: 200px;
-}
-
-.productCard-text {
-  font-family: "New Rocker";
 }
 
 .individualCard {
@@ -53,8 +52,12 @@ body, html {
 
 #productCardTitle {
   background-color: white;
-  border-style: solid;
   padding: 0px;
+}
+
+#dropdownMenuButton {
+  color: black;
+  background-color: white;
 }
 
 /* .individualProductCard {
@@ -84,6 +87,18 @@ footer {
   padding-top: 1px;
   background-color: gray;
 } */
+
+.merchTitle {
+ font-family: 'New Rocker';
+ font-size: 70px;
+ letter-spacing: 5px;
+ color: white;
+ text-shadow:
+		-1px -1px 0 #000,
+		1px -1px 0 #000,
+		-1px 1px 0 #000,
+		1px 1px 0 #000;
+}
 
 .title {
   margin: 0px;

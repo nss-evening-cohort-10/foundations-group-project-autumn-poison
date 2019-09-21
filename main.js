@@ -229,8 +229,8 @@ const products = [
          productDomString += `
          <div class="individualCard">
          <div class="card" style="width: 18rem;">
+         <img src="${product.imageUrl}" class="card-img-top" alt="${product.type}">
          <h1 class="text-center" id="productCardTitle">${product.name}</h1>
-         <img src="${product.imageUrl}" class="card-img-top align-content-center" alt="${product.type}">
          <div class="card-body">
            <p class="productCard-text text-center">${product.description}</p>
          </div>
@@ -239,19 +239,6 @@ const products = [
        </div>
         `
         };
-
-        
-
-/* <div class="individualProductCard">
-          <div class="product-card text-center">
-           <h1 class="productCardTitle">${product.name}</h1>
-            <img class="productImage" src=${product.imageUrl} alt='image of ${product.name}'/>
-             <h5 class"productCardBody">${product.description}</h4>
-              <footer>
-              <a href="purchase.html" class="btn btn-primary">Buy</a>
-              </footer>
-          </div>
-         </div> */
       
         printToDOM(productDomString, 'product-card');
   };
