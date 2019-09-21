@@ -142,10 +142,10 @@ const products = [
     description: 'Take home a souvenir poster from the largest concert we have played to date with Kronstadt Rising, The Poets and Fallout! ',
   },
 
-  { name: 'First ever Autumn Poison Concert Poster',
+  { name: 'Autumn Poison Concert Poster',
     type: 'poster',
   imageUrl: 'http://i192.photobucket.com/albums/z149/pengy1966/KYPP838.jpg',
-  description: 'Put our poster on your wall of our first ever gig with Sheena and Paul rocking out! The legends were born that night.',
+  description: 'Put our poster on your wall of our first ever gig with Julian and Sheena rocking out! The legends were born that night.',
   },
 
   { name: 'Punk Rock Poster with Raw Emotion',
@@ -183,7 +183,7 @@ const products = [
          <div class="individualCard">
          <div class="card" style="width: 18rem;">
          <img src="${product.imageUrl}" class="card-img-top" alt="${product.type}">
-         <h1 class="text-center" id="productCardTitle">${product.name}</h1>
+         <h2 class="text-center" id="productCardTitle">${product.name}</h2>
          <div class="card-body">
            <p class="productCard-text text-center">${product.description}</p>
          </div>
