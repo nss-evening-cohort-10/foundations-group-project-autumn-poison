@@ -1,4 +1,3 @@
-
 const printToDOM = (textToPrint, divID) => {
   document.getElementById(divID).innerHTML = textToPrint;
 }; 
