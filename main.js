@@ -124,7 +124,7 @@ const products = [
     description: 'Buy our 2nd full cassette "Songs of Anger, Songs of Hope" with hits like: "Worship the Bomb", and "Dirty Business!"',
   },
 
-  { name: 'Kitchen Sink Politics Cassette Tape',
+  { name: 'Kitchen Sink Politics Cassette Tape - (1984)',
     type: 'cassettes',
     imageUrl:'http://i192.photobucket.com/albums/z149/pengy1966/scan522.jpg',
     description: 'Buy your 1st full cassette tape "Kitchen Sink Politics" with hits like: "Joke Army", "Half the Sky" and more!',
@@ -136,10 +136,10 @@ const products = [
   description: 'Heres a compilation album we are on called "Bulls**t Detector Volume 4" with our track: "Utopia - A New World"',
   },
 
-  { name: 'Concert Poster from our First Ever Show',
+  { name: 'Concert Poster from our First Ever Show (1980)',
     type: 'poster',
     imageUrl: 'http://i192.photobucket.com/albums/z149/pengy1966/pengy1966%20stuff/KYPP435.jpg',
-    description: 'Take home a souvenir poster from the largest concert we have played to date with Kronstadt Rising and The Poets! ',
+    description: 'Take home a souvenir poster from the largest concert we have played to date with Kronstadt Rising, The Poets and Fallout! ',
   },
 
   { name: 'First ever Autumn Poison Concert Poster',
@@ -148,23 +148,23 @@ const products = [
   description: 'Put our poster on your wall of our first ever gig with Sheena and Paul rocking out! The legends were born that night.',
   },
 
-  { name: 'Punk Rock Poster proving its all about emotion',
+  { name: 'Punk Rock Poster with Raw Emotion',
     type: 'poster',
   imageUrl: 'http://www.southendpunk.com/images/thebands/autumn3l.jpg',
   description: 'Let the emotion overcome you, Julian! Here’s a poster that reminds us that it’s all about the music and the message.',
   },
 
-  { name: 'A Real Punk Rock Sticker',
+  { name: 'Punk Rock Sticker (pack of 3 stickers)',
     type: 'sticker',
     imageUrl: 'https://res.cloudinary.com/teepublic/image/private/s--HNTufKxp--/t_Resized%20Artwork/c_fit,g_north_west,h_954,w_954/co_191919,e_outline:48/co_191919,e_outline:inner_fill:48/co_ffffff,e_outline:48/co_ffffff,e_outline:inner_fill:48/co_bbbbbb,e_outline:3:1000/c_mpad,g_center,h_1260,w_1260/b_rgb:eeeeee/c_limit,f_jpg,h_630,q_90,w_630/v1514826476/production/designs/2243845_1.jpg',
-    description: 'Are you really Punk Rock? Get a sticker.'
+    description: 'Are you really Punk Rock? Get a sticker and put it on your favorite guitar, your bedroom wall, or your punk rock scrapbook.'
 
   },
 
-  { name: 'Distressed Anarchy Sticker',
+  { name: 'Anarchy Sticker (pack of 3 stickers)',
     type: 'sticker',
     imageUrl: 'https://res.cloudinary.com/teepublic/image/private/s--9Q71W9wb--/t_Resized%20Artwork/c_fit,g_north_west,h_954,w_954/co_191919,e_outline:48/co_191919,e_outline:inner_fill:48/co_ffffff,e_outline:48/co_ffffff,e_outline:inner_fill:48/co_bbbbbb,e_outline:3:1000/c_mpad,g_center,h_1260,w_1260/b_rgb:eeeeee/c_limit,f_jpg,h_630,q_90,w_630/v1516240865/production/designs/2287723_0.jpg',
-    description: 'Let anarchy rain.',
+    description: 'Put one of the stickers on your car bumper and let anarchy rain wild when you are driving down the streets.',
   },
 
   { name: 'Fight the Power Stickers',
@@ -180,16 +180,16 @@ const products = [
        for (let i = 0; i < productsArray.length; i++) {
         let product = productsArray[i];
          productDomString += `
-         <div class="individualProductCard">
-          <div class="product-card text-center">
-           <h1 class="productCardTitle">${product.name}</h1>
-            <img class="productImage" src=${product.imageUrl} alt='image of ${product.name}'/>
-             <h5 class"productCardBody">${product.description}</h4>
-              <footer>
-              <a href="purchase.html" class="btn btn-primary">Buy</a>
-              </footer>
-          </div>
+         <div class="individualCard">
+         <div class="card" style="width: 18rem;">
+         <img src="${product.imageUrl}" class="card-img-top" alt="${product.type}">
+         <h1 class="text-center" id="productCardTitle">${product.name}</h1>
+         <div class="card-body">
+           <p class="productCard-text text-center">${product.description}</p>
          </div>
+         <a href="purchase.html" class="btn btn-primary">Buy</a>
+       </div>
+       </div>
         `
         };
       
@@ -289,6 +289,7 @@ const sortClick = (event) => {
     };
 
 }; 
+
 
 let thankYouMessage = 'Thank you for your purchase!'
 

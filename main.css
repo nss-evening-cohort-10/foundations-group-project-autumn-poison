@@ -21,23 +21,46 @@ body, html {
   padding-top: 25px;
 }
 
-.product-card {
+/* .product-card {
   border-style: solid;
   border-color: black;
   border-width: 3px;
   width: 400px;
   background-color: rgb(214, 206, 206);
   color: black;
-}
+} */
 
 #product-card {
-  margin: 1px 1px 1px 1px;
-  padding-left: 140px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 5px 5px 5px 5px;
+  padding-left: 20px;
   padding-top: 50px;
   padding-bottom: 10px;
+
 }
 
-.individualProductCard {
+.card-img-top {
+ width: 285px;
+ height: 200px;
+}
+
+.individualCard {
+  padding: 5px 5px 5px 5px;
+}
+
+#productCardTitle {
+  background-color: white;
+  padding: 0px;
+}
+
+#dropdownMenuButton {
+  color: black;
+  background-color: white;
+}
+
+/* .individualProductCard {
   padding: 10px 10px 10px 10px;
   height: 600px;
 }
@@ -63,6 +86,18 @@ footer {
   padding-top: 1px;
   padding-top: 1px;
   background-color: gray;
+} */
+
+.merchTitle {
+ font-family: 'New Rocker';
+ font-size: 70px;
+ letter-spacing: 5px;
+ color: white;
+ text-shadow:
+		-1px -1px 0 #000,
+		1px -1px 0 #000,
+		-1px 1px 0 #000,
+		1px 1px 0 #000;
 }
 
 .title {
