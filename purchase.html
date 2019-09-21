@@ -9,11 +9,19 @@
         <title>Complete Purchase</title>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <link rel="stylesheet" href="./main.css">
-    </head>>
+    </head>
 <body>
+<nav class="nav">
+    <div class="navbar navbar-dark">
+        <a class="text-white nav-link ml-5" href="./index.html">Home</a>
+        <a class="text-white nav-link" href="./events.html">Events</a>
+        <a class="text-white nav-link" href="./merch.html">Merch</a>
+        <a class="text-white nav-link" href="./disc.html">Discography</a>
+    </div>
+</nav>
     <h1 class="d-flex justify-content-center" id="purchase-header">Complete Purchase</h1>
-    <div class="d-flex justify-content-center" id= "purchase-card">
-        <form class="text-center" >
+    <div class="d-flex justify-content-center" id="purchase-card">
+        <form class="text-center col-lg-3">
             <div class="form-col">
                 <div class="form-group">
                 <label for="inputEmail4">Email</label>
@@ -21,7 +29,7 @@
                 </div>
                 <div class="form-group">
                 <label for="inputName">Name</label>
-                <input type="password" class="form-control" id="inputPassword4" placeholder="Name">
+                <input type="name" class="form-control" id="inputName4" placeholder="Name">
                 </div>
             </div>
             <div class="form-group">
@@ -99,7 +107,8 @@
                 <input type="text" class="form-control" id="inputZip">
                 </div>
             </div>
-            <button class="btn btn-success">Complete Purchase</button>
+            <button type="button" class="btn btn-success" id="complete-purchase">Complete Purchase</button>
+            <div class="alert" id="checkout-zone"></div>
         </form>
     </div>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -107,4 +116,4 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script src="./main.js"></script>
 </body>
-</html>
+</html>>
