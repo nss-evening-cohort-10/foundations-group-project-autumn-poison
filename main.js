@@ -271,25 +271,27 @@ const products = [
   for (i=0; i < eventsArray.length; i++) {
       let event = eventsArray[i]
       eventDomString += `
-      <div class="accordion" id="accordionExample">
+      <div class="d-flex justify-content-center">
+        <div class="accordion col-md-3" id="accordionExample">
           <div class="card text-center">
               <div class="card-header" id="headingOne">
-                  <h2 class="mb-0">
-                  <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseOne${i}" aria-expanded="false" aria-controls="collapseOne">
-                  ${event.city}, ${event.date}
-                  </button>
-                  </h2>
+                <h2 class="mb-0">
+                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseOne${i}" aria-expanded="false" aria-controls="collapseOne">
+                ${event.city}, ${event.date}
+                </button>
+                </h2>
               </div>
 
               <div id="collapseOne${i}" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
-                  <div class="card-body">
-                      <h3>${event.venue}</h3>
-                      <h3>${event.time}</h3>
-                      <h3>${event.price}</h3>
-                      <a href="purchase.html" class="btn btn-primary">Buy</a>
-                  </div>
+                <div class="card-body">
+                  <h3>${event.venue}</h3>
+                  <h3>${event.time}</h3>
+                  <h3>${event.price}</h3>
+                  <a href="purchase.html" class="btn btn-primary">Buy</a>
+                </div>
               </div>
           </div>
+        </div>
       </div>
       `
   }
