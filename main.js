@@ -349,8 +349,22 @@ const checkOut = () => {
   printToDOM(purchaseDomString, 'checkout-zone');
 };
 
-//  document.getElementById('all').addEventListener('click', sortClick);
-//  document.getElementById('cassettes').addEventListener('click', sortClick);
-//  document.getElementById('poster').addEventListener('click', sortClick);
-//  document.getElementById('sticker').addEventListener('click', sortClick);
-document.getElementById('complete-purchase').addEventListener('click', checkOut);
+// document.getElementById('all').addEventListener('click', sortClick);
+// document.getElementById('cassettes').addEventListener('click', sortClick);
+// document.getElementById('poster').addEventListener('click', sortClick);
+// document.getElementById('sticker').addEventListener('click', sortClick);
+// document.getElementById('complete-purchase').addEventListener('click', checkOut);
+
+const clickers = () => {
+  
+  if (document.URL.includes('merch')) {
+    document.getElementById('all').addEventListener('click', sortClick);
+    document.getElementById('cassettes').addEventListener('click', sortClick);
+    document.getElementById('poster').addEventListener('click', sortClick);
+    document.getElementById('sticker').addEventListener('click', sortClick);
+  } else if (document.URL.includes('purchase')) {
+    document.getElementById('complete-purchase').addEventListener('click', checkOut);
+  }
+};
+
+clickers();
