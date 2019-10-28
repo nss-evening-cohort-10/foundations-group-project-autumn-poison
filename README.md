@@ -7,11 +7,10 @@
 This application is a mock band website for the rock band named "Autumn Poison", where you can find a biography of the band along with pages detailing their discography and links to buy concert tickets and miscellaneous band merchandise.
 
 ## Screenshots
-![Autumn Poison Site Preview 1]()
-![Autumn Poison Site Preview 2]()
-![Autumn Poison Site Preview 3]()
-![Autumn Poison Site Preview 4]()
-![Autumn Poison Site Preview 5]()
+![Autumn Poison Site Preview 1](https://github.com/nss-evening-cohort-10/foundations-group-project-autumn-poison/blob/master/screenshots/bandHomePage.PNG?raw=true)
+![Autumn Poison Site Preview 2](https://github.com/nss-evening-cohort-10/foundations-group-project-autumn-poison/blob/master/screenshots/bandEventsPage.PNG?raw=true)
+![Autumn Poison Site Preview 3](https://github.com/nss-evening-cohort-10/foundations-group-project-autumn-poison/blob/master/screenshots/bandMerchPage.PNG?raw=true)
+![Autumn Poison Site Preview 4](https://github.com/nss-evening-cohort-10/foundations-group-project-autumn-poison/blob/master/screenshots/bandDiscographyPage.PNG?raw=true)
 
 ## How to run
 1. Clone down this project.
